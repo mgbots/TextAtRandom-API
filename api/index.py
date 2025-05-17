@@ -57,7 +57,7 @@ def rate_limit_check(api_key):
             if count >= rate_limit['limit']:
                 return jsonify({
                     "error": "Rate limit exceeded",
-                    "developer": "Rate limits can be a bummer! However, you can remove all rate limits for yourself if you host it here redirect.magicgamer.xyz"
+                    "developer": "Rate limits can be a bummer! However, you can remove all rate limits for yourself if you host it here redirect.magicgamer.xyz/randomapi"
                 }), 429
             rate_limits[api_key]['count'] += 1
     return None, None
